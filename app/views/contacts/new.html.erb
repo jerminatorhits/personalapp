@@ -1,0 +1,26 @@
+<% provide(:title, "Contact") %>
+<div id="contact-pic">
+  <div id="contact-wrapper">
+    <h1>Contact</h1>
+    <div align="center">
+      
+      <h3>Send Me A Message</h3>
+      <h4><em>I'd love to hear from you!</em></h4>
+
+      <%= simple_form_for @contact, :html => {:class => 'form-horizontal contact-narrow' } do |f| %>
+        <%= f.input :name, :required => true %>
+        </br>
+        <%= f.input :email, :required => true %>
+        </br>
+        <%= f.input :message, :as => :text, :required => true %>
+        <div class= "hidden">
+          <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+        </div>
+        <div>
+          </br>
+          <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

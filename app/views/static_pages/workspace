@@ -1,0 +1,132 @@
+<!-- Workspace to save features -->
+
+<!-- application.js original
+
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require_tree .
+
+-->
+
+<!-- Image Carousel -->
+
+<div class="carousel">
+  <div><img src="/assets/car1.jpg"></div>
+  <div><img src="/assets/car2.jpg"></div>
+  <div><img src="/assets/car3.jpg"></div>
+  <div><img src="/assets/car4.jpg"></div>
+  <div><img src="/assets/car5.jpg"></div>
+  <div><img src="/assets/car6.jpg"></div>
+</div>
+
+#6699ff - light blue
+#001a4d - dark blue
+#2873bd - nice blue
+rgba(40, 115, 189, 0.9)
+
+<!-- Waves video -->
+
+<div align="center">
+<%= video_tag(["waves.mp4"], :size => "320x240", :autoplay => true, :loop => true, :muted => "", :id => "hobbies-vid") %>
+</div>
+
+<!-- Cooking Entry -->
+
+	<h2>Cooking</h2>
+
+	<p>Well, I can't say that I'm much of a foodie...but I do enjoy making food that's both low-carb and tastes great!  Personally, I like to make easy-to-cook food, where little cleanup is involved yet still high quality.  I find that cooking is very similar to music production, each requiring attention to minute details and fine-tuning various metrics and attributes. I love protein -- ideally, I'd eat steak for breakfast every day.  Take a look at some of my dishes below:</p>
+
+<!-- Slick jQuery -->
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Traveling Photos -->
+
+<div class="img-box">
+    <a href="assets/images/amsterdam.jpg" class="img-thumbnail html5lightbox" data-group="travel" title="Amsterdam"><%= image_tag("amsterdam.jpg", alt: "Amsterdam", width:"152", height: "118") %></a>
+    <h4>Amsterdam</h4>
+    </div>
+    <div class="img-box">
+    <a href="assets/images/berlin.jpg" class="img-thumbnail html5lightbox" data-group="travel" title="Berlin"><%= image_tag("berlin.jpg", alt: "Berlin", width:"152", height: "118") %></a>
+    <h4>Berlin</h4>
+    </div>
+    <div class="img-box">
+    <a href="assets/images/prague.jpg" class="img-thumbnail html5lightbox" data-group="travel" title="Prague"><%= image_tag("prague.jpg", alt: "Prague", width:"152", height: "118") %></a>
+    <h4>Prague</h4>
+    </div>
+    <div class="img-box">
+    <a href="assets/images/vienna.jpg" class="img-thumbnail html5lightbox" data-group="travel" title="Vienna"><%= image_tag("vienna.jpg", alt: "Vienna", width:"152", height: "118") %></a>
+    <h4>Vienna</h4>
+    </div>
+    <div class="img-box">
+    <a href="assets/images/budapest.jpg" class="img-thumbnail html5lightbox" data-group="travel" title="Budapest"><%= image_tag("budapest.jpg", alt: "Budapest", width:"152", height: "118") %></a>
+    <h4>Budapest</h4>
+    </div>
+    <div class="img-box">
+    <a href="assets/images/london.jpg" class="img-thumbnail html5lightbox" data-group="travel" title="London"><%= image_tag("london.jpg", alt: "London", width:"152", height: "118") %></a>
+    <h4>London</h4>
+    </div>
+    <div class="img-box">
+    <a href="assets/images/krakow.jpg" class="img-thumbnail html5lightbox" data-group="travel" title="Krakow"><%= image_tag("krakow.jpg", alt: "Kraków", width:"152", height: "118") %></a>
+    <h4>Kraków</h4>
+    </div>
+
+<!-- About Me Paragraph -->
+
+<p>Growing up, I had a childhood dream of becoming an inventor. Oh how I would love to craft Legos and K'nex together to form titanic contraptions. I knew that I wanted to discover how things worked and eventually build something awesome to benefit mankind. Throughout my traditional schooling experience, I subconsciously set my mind on design and learning how to improve things. Math and science piqued my interest as they directly influenced my understanding of the physical world and revealed the key elements for problem solving. With this in mind, I pursued a degree in mechanical engineering to grasp a solid foundation on physical mechanisms, electronics, and software. College not only provided my with an academic background but also gave me different perspectives through like-minded individuals. My colleagues and I got together one summer break to try building a startup. Though we only worked on it for a summer, I realized that building a business/organization and building a product were very similar. I knew that I definitely wanted to build something with my life. After graduating from university, I didn't quite know exactly what I wanted to do with my life - what were my next steps supposed to be? Get a job and work for a while? Make another startup? In the midst of decision-making, I decided to take some time to go travel. My friend and I made our way from Budapest all the way to Paris in about two months. During that time, I learned various ways on how different people live life. Europe was such a treat as you can travel a few hours in one direction and get dropped off at a totally different culture with different language, currency, and culture. I think the biggest takeaway apart from the amazing sights and beautiful architecture was interacting with locals and fellow travelers, learning what they value most and what makes them happy. At the end of the day, I feel like I gained a greater perspective on how to life and even though I still don't have all the answers, I can begin be grateful for what I have and truly cherish the little things in life. At one point in my journey, I found myself in the situation of having to sleep on a bench outside a police station in Thessaloniki, Greece. In the moment of desperation, I learned to value the life's basic necessities. In a similar light, I finally understood the value of money and I don't mean that in a frivolous sense. Every time I booked a train or bought a meal, I am reminded of how valuable it is to be taken care of during travel. Having enough money to travel would provide me with the same happiness as having millions of dollars. Money can really only buy you so much. I find much joy and beauty in being able to walk down to the nearest grocery store to purchase food and water and knowing that my needs are going to be met. With that, I am currently on a quest to really understand what the world needs and aspire to create or build on something meaningful to the world. I know it's a rather broad statement but I will continue to search for answers on how to apply all my experiences and knowledge towards something great.</p>
+
+<div class="info">
+
+    <h2>Favorite Jokes</h2>
+
+    <ul>
+      <li>What do you call a !#@$!@#$
+        <div class="answer">
+        </div>
+      </li>
+      <li>What do you call a !#@$!@#$
+        <div class="answer">
+        </div>
+      </li>
+      <li>What do you call a !#@$!@#$
+        <div class="answer">
+        </div>
+      </li>
+    </ul>
+
+    </div>
+
+
+#contact-pic {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    padding: 35px;
+    display: block;
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+}
+
+#contact-pic::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    padding: 35px;
+    background: url(contact.jpg) no-repeat 50% 25%;
+    opacity: 0.88;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}

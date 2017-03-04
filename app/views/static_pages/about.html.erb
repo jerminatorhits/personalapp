@@ -1,0 +1,69 @@
+<% provide(:title, "About") %>
+
+<div class="above-the-fold">
+  <h2 id="hello">Hello there!</h2>
+
+  <h2 id="please">Pleased to meet you.</h2>
+  
+  <div id="button-spacing">
+    <div class="cta-box-top-wrapper"><%= link_to "Meet Me", "#story", class: "btn btn-lg btn-primary" %></div>
+  </div>
+</div>
+  
+<div class="below-the-fold">
+  <div class="wrapper" id="story">
+    
+    <h1 style="margin-bottom: 0;">Fun Facts</h1>
+    <br>
+    <div id="info">
+      <div class="about-block">
+	    <ul id="baseball">
+		  <li>I've sung and played piano for <a href="https://www.facebook.com/JeremyKwaMusic/videos/1506988112662815/">4 hours straight</a></li>
+		  <li>I once slept overnight outside a police station in Greece</li>
+		  <li>I go to baseball games early to catch practice balls</li>
+		  <li>I have perfect pitch</li>
+	    </ul>
+	  </div>
+
+	  <div class="about-block">
+	    <%= image_tag("baseball.jpg", :alt => "atat", :size => "360x240") %>
+	  </div>
+	</div>
+
+    <div id="favorite">
+      <div id="spacer">
+      </div>
+      <div class="about-block">
+    	<%= image_tag("steak.jpg", :alt => "atat", :size => "360x240") %>
+      </div>
+      <div class="about-block">
+        <div id="fav-text-box">
+          <ul id="meat">
+            <li>Favorite Food: Steak and Buffalo Wings</li>
+            <br>
+            <li>Favorite Dessert: Bacon</li>
+            <br>
+            <li>Favorite Video Game: StarCraft 2</li>
+            <br>
+            <li>Favorite Show: Parks And Recreation</li>
+		  </ul>
+	    </div>
+	  </div>
+	</div>
+
+    <div align="center">
+
+		<h3>Graduated from UCSD in Mechanical Engineering (Go Tritons!)</h3>
+
+		<h3>Currently building websites and apps</h3>
+
+		<h3>Picking up audio engineering as a hobby</h3>
+
+		<h3><em>Always learning new things along the way</em></h3>
+
+		<h3>Things I like to do: See my <%= link_to "Hobbies.", hobbies_path %></h3>
+
+    </div>
+
+  </div>
+</div>

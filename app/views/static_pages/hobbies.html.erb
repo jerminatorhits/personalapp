@@ -1,0 +1,25 @@
+<% provide(:title, "Hobbies") %>
+
+<div id="hobbies-background">
+  <div class="wrapper" id="tab-wrapper">
+
+	<div class="tab">
+	  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Coding')" id="d">Software Engineering</a>
+	  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Travel')" id="e">Traveling</a>
+	  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Music')" id="f">Music Production</a>
+	</div>
+
+	<div id="Coding" class="tabcontent">
+	  <%= render 'hobbies/software_engineering' %>
+	</div>
+
+	<div id="Travel" class="tabcontent">
+	  <%= render 'hobbies/traveling' %>
+	</div>
+
+	<div id="Music" class="tabcontent">
+	  <%= render 'hobbies/music_production' %>
+	</div>
+
+  </div>
+</div>
