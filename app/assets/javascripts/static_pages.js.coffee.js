@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= render 'layouts/rails_default' %>
-    <%= render 'layouts/shim' %>
+/* Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/ */
 
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 291617821255179,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
 
-<script>
-<!-- Facebook API Connection -->  
-window.fbAsyncInit = function() {
-FB.init({
-  appId      : 291617821255179,
-  xfbml      : true,
-  version    : 'v2.8'
-});
-FB.AppEvents.logPageView();
-};
-
-(function(d, s, id){
- var js, fjs = d.getElementsByTagName(s)[0];
- if (d.getElementById(id)) {return;}
- js = d.createElement(s); js.id = id;
- js.src = "//connect.facebook.net/en_US/sdk.js";
- fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 
 <!-- Twitter API connection -->
 
-<script>
-window.twttr = (function(d, s, id) {
+<script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
   if (d.getElementById(id)) return t;
@@ -44,25 +38,32 @@ window.twttr = (function(d, s, id) {
   };
 
   return t;
-}(document, "script", "twitter-wjs"));
-</script>
+}(document, "script", "twitter-wjs"));</script>
 
-<script>
-$(document).ready(function(){
-$('.carousel').slick({
-  dots: true,
-  infinite: true,
-  speed: 1500,
-  fade: true,
-  autoplay: true,
-  autoplaySpeed: 6000,
-  cssEase: 'linear'
-});
-});
-var MyViewModel = function MyViewModel() {
-var self = this;
-self.myURL = ko.observable('http://jes.al/');
-self.showPreview = ko.observable();
+
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="html5lightbox/html5lightbox.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.carousel').slick({
+          dots: true,
+          infinite: true,
+          speed: 1500,
+          fade: true,
+          autoplay: true,
+          autoplaySpeed: 6000,
+          cssEase: 'linear'
+        });
+      });
+      var MyViewModel = function MyViewModel() {
+      var self = this;
+      self.myURL = ko.observable('http://jes.al/');
+      self.showPreview = ko.observable();
 
       self.initLinkPreview = function () {
           $.ajax({
@@ -86,12 +87,36 @@ self.showPreview = ko.observable();
 
 ko.applyBindings(new MyViewModel());
 
-</script>
+
+//fullscreen video button
 
 
-
-
-<script>
+var vid = document.getElementById("bgvid"),
+pauseButton = document.getElementById("vidpause");
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+function vidFade() {
+    vid.classList.add("stopfade");
+}
+vid.addEventListener('ended', function() {
+    // only functional if "loop" is removed 
+     vid.pause();
+  // to capture IE10
+  vidFade();
+});
+pauseButton.addEventListener("click", function() {
+    vid.classList.toggle("stopfade");
+  if (vid.paused) {
+vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+        vid.pause();
+        pauseButton.innerHTML = "Paused";
+  }
+});
 
 // tabs
 
@@ -115,10 +140,10 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-</script>
 
-<script>
-
+// Get the element with id="defaultOpen" and click on it
+//document.getElementById("defaultOpen").click();
+//$(document).ready(function(){
 $(document).ready(function(){
   var happy = 1;
 });
@@ -142,14 +167,7 @@ else if(happy == 3){
   document.getElementById("f").click();
 }
 
-</script>
-
-
-
-<script>
-
 // Smooth scrolling after button click
-
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -164,19 +182,4 @@ $(function() {
     }
   });
 });
-</script>
-  </head>
-  <body>
-
-
-  	  <%= render 'layouts/header' %>
-      <%# flash.each do |message_type, message| %>
-        <%#= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <%# end %>
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%#= debug(params) if Rails.env.development? %>
-
-  </body>
-
-</html>
+    </script>
