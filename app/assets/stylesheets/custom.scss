@@ -340,7 +340,7 @@ span.picture {
   padding: 50px auto;
 }
 
-#button-spacing {
+.button-spacing {
   text-align: center;
 }
 
@@ -842,8 +842,8 @@ div.tab a:focus, .active {
   height: 240px;
 }
 
-.baseball {
-  padding-top: 33px;
+#baseball {
+  padding-top: 20px;
 }
 
 #meat {
@@ -856,3 +856,9 @@ div.tab a:focus, .active {
   height: 240px;
 }
 
+#ucsd {
+  padding-top: 33px;
+}
+.below-the-fold {
+  background-color: #f2f2f2;
+}
