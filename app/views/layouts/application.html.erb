@@ -10,9 +10,9 @@
 
 
   	  <%= render 'layouts/header' %>
-      <%# flash.each do |message_type, message| %>
-        <%#= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <%# end %>
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%#= debug(params) if Rails.env.development? %>
@@ -148,10 +148,20 @@ $(function() {
 </script>
 
 <script>
-$(document).ready(function(){
-    var happy = 0;
-});
 
+/*
+document.getElementById("a").addEventListener("click", tabular("d"));
+document.getElementById("b").addEventListener("click", tabular("e"));
+document.getElementById("c").addEventListener("click", tabular("f"));
+
+function tabular(demo) {
+    document.getElementById( demo ).click();
+}
+*/
+
+$("#g").click(function(){
+    happy = 1;
+});
 $("#a").click(function(){
     happy = 1;
 });
@@ -161,15 +171,17 @@ $("#b").click(function(){
 $("#c").click(function(){
     happy = 3;
 });
+
 if(happy == 1){
-  document.getElementById("d").click();
+  $("#d").click();
 }
 else if(happy == 2){
-  document.getElementById("e").click();
+  $("#e").click();
 }
 else if(happy == 3){
-  document.getElementById("f").click();
+  $("#f").click();
 }
+
 </script>
   </body>
 

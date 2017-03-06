@@ -2,20 +2,32 @@
 <div id="contact-pic">
   <div id="contact-wrapper">
     <h1>Contact</h1>
+    <% if @contact.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-danger">
+            The form contains <%= pluralize(@contact.errors.count, "error") %>.
+          
+          <ul>
+          <% @contact.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+          </div>
+        </div>
+      <% end %>
     <div align="center">
       
+      
+
       <h3>Send Me A Message</h3>
       <h4><em>I'd love to hear from you!</em></h4>
 
       <%= simple_form_for @contact, :html => {:class => 'form-horizontal contact-narrow' } do |f| %>
-        <%= f.input :name, :required => true %>
+        <%= f.input :name, :required => true, error: false, class: 'form-control' %>
         </br>
-        <%= f.input :email, :required => true %>
+        <%= f.input :email, :required => true, error: false, class: 'form-control'%>
         </br>
-        <%= f.input :message, :as => :text, :required => true %>
-        <div class= "hidden">
-          <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-        </div>
+        <%= f.input :message, :as => :text, :required => true, error: false, class: 'form-control' %>
         <div>
           </br>
           <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>

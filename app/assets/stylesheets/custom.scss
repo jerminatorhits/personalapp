@@ -339,9 +339,15 @@ span.picture {
   margin-top: 50px;
   padding: 50px auto;
 }
+
 #button-spacing {
   text-align: center;
 }
+
+#back-home {
+  margin: 10px auto;
+}
+
 .cta-box-top-wrapper {
   position: absolute;
   clear: both;
@@ -391,6 +397,13 @@ background-color: #dff0d8;
 border-color: #d6e9c6;
 color: #468847;
 text-align: left;
+}
+
+.alert {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 20px !important;
+  margin-left: 10px !important;
 }
 
 /* video */
@@ -782,7 +795,7 @@ div.tab a:focus, .active {
   display: none !important;
 }
 
-#info {
+.info {
   ul {
     float: left;
     width: 400px;
@@ -794,7 +807,7 @@ div.tab a:focus, .active {
     float: right;
   }
 }
-#info:after {
+.info:after {
     content: '';
     display: block;
     clear: both;
@@ -829,7 +842,7 @@ div.tab a:focus, .active {
   height: 240px;
 }
 
-#baseball {
+.baseball {
   padding-top: 33px;
 }
 
@@ -842,3 +855,4 @@ div.tab a:focus, .active {
   width: 20px;
   height: 240px;
 }
+

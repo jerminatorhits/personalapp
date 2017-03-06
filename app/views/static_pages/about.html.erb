@@ -15,9 +15,9 @@
     
     <h1 style="margin-bottom: 0;">Fun Facts</h1>
     <br>
-    <div id="info">
+    <div class="info">
       <div class="about-block">
-	    <ul id="baseball">
+	    <ul class="baseball">
 		  <li>I've sung and played piano for <a href="https://www.facebook.com/JeremyKwaMusic/videos/1506988112662815/">4 hours straight</a></li>
 		  <li>I once slept overnight outside a police station in Greece</li>
 		  <li>I go to baseball games early to catch practice balls</li>
@@ -50,20 +50,20 @@
 	    </div>
 	  </div>
 	</div>
+    <div class="info">
+      <div class="about-block">
+	    <ul class="baseball">
+		  <li>Graduated from UCSD in Mechanical Engineering (Go Tritons!)</li>
+		  <li>Currently building websites and apps</li>
+		  <li>Picking up audio engineering as a hobby</li>
+		  <li><em>Always learning new things along the way</em></li>
+		  <li>See my <%= link_to "Hobbies", hobbies_path %>.</li> 
+	    </ul>
+	  </div>
 
-    <div align="center">
-
-		<h3>Graduated from UCSD in Mechanical Engineering (Go Tritons!)</h3>
-
-		<h3>Currently building websites and apps</h3>
-
-		<h3>Picking up audio engineering as a hobby</h3>
-
-		<h3><em>Always learning new things along the way</em></h3>
-
-		<h3>Things I like to do: See my <%= link_to "Hobbies.", hobbies_path %></h3>
-
-    </div>
-
+	  <div class="about-block">
+	    <%= image_tag("https://c1.staticflickr.com/4/3739/33135107202_b30fe452af_z.jpg", :alt => "atat", :size => "360x240") %>
+	  </div>
+	</div>
   </div>
 </div>
