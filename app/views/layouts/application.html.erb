@@ -46,6 +46,17 @@ window.twttr = (function(d, s, id) {
 }(document, "script", "twitter-wjs"));
 </script>
 
+  </head>
+  <body>
+
+
+  	  <%= render 'layouts/header' %>
+      <%# flash.each do |message_type, message| %>
+        <%#= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <%# end %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%#= debug(params) if Rails.env.development? %>
 <script>
 $(document).ready(function(){
 $('.carousel').slick({
@@ -132,20 +143,10 @@ $(function() {
   });
 });
 </script>
-  </head>
-  <body>
 
-
-  	  <%= render 'layouts/header' %>
-      <%# flash.each do |message_type, message| %>
-        <%#= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <%# end %>
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%#= debug(params) if Rails.env.development? %>
 <script>
 $(document).ready(function(){
-    var happy = 1;
+    var happy = 0;
 });
 
 $("#a").click(function(){
@@ -166,7 +167,6 @@ else if(happy == 2){
 else if(happy == 3){
   document.getElementById("f").click();
 }
- 
 </script>
   </body>
 
