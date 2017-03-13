@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: #4d4d4d !important;
   font-size: 100%;
   min-height: 100%;
   position: relative;
@@ -38,12 +38,12 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #4d4d4d;
   z-index: -2;
 }
 
 #site-content {
-  width: 1300px;
+  width: 1280px;
 }
 
 section {
@@ -528,6 +528,7 @@ video#bgvid {
     width: 1280px;
 }
 
+
 #life {
    float: left;
    position: absolute;
@@ -560,15 +561,14 @@ video#bgvid {
 #colfun {
   float: left;
 	background-color: #404040;
-  width: 40%;
+  width: 42.5%;
 	height: 650px;
 }
 
 #colfun-upper {
-  position: center;
+  align: center;
 	background-color: #262626;
   width: 100%;
-	height: auto;
   overflow: none;
 }
 
@@ -584,8 +584,8 @@ video#bgvid {
 #colfun-lower {
   position: absolute;
 	background: rgba(92, 127, 138, 0.9);
-  width: 40%;
-	height: 300px;
+  width: 42.5%;
+	height: 272px;
 	padding: 10px 50px;
 	li {
       list-style-type: none;

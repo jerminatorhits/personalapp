@@ -54,6 +54,8 @@ window.twttr = (function(d, s, id) {
 
   return t;
 }(document, "script", "twitter-wjs"));
+
+twttr.widgets.load()
 </script>
 
 <script>
@@ -163,13 +165,13 @@ $("#c").click(function(){
 });
 
 if(happy == 1){
-  $("#d").click();
+  openCity(event, 'Coding');
 }
 else if(happy == 2){
-  $("#e").click();
+  openCity(event, 'Travel');
 }
 else if(happy == 3){
-  $("#f").click();
+  openCity(event, 'Music');
 }
 
 </script>
